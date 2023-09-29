@@ -13,12 +13,13 @@ public class Program {
 
 	public static void main(String[] args) {
 
-    Department obj = new Department(1, "Gecinei");
-    Seller seller =  new Seller(1,"Joao","joao@hotmail.com",new Date(),2000.0, obj);
+    
     
     SellerDao sellerDao = DaoFactory.creatSellerDao();
+    
+    Seller seller = sellerDao.findByID(3);
 
-    System.out.println(obj);
+   
     System.out.println(seller);
 	}
 
