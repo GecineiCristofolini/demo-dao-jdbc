@@ -34,6 +34,17 @@ public class Program {
     
     
     
+    System.out.println("=== Teste 3 seller findByalll =====" );
+   
+     list = sellerDao.findAll();
+    
+    for (Seller obj : list) {
+    	
+    	System.out.println(obj);	
+    	
+    }
+    
+    
 	}
 
 }
