@@ -33,9 +33,8 @@ public class Program {
     	
     }
     
-    
-    
-   
+    System.out.println("=== Teste 3 seller findByalll =====" );
+       
    
      list = sellerDao.findAll();
     
@@ -50,6 +49,16 @@ public class Program {
     Seller newseller = new Seller(null, "Greg","greg@gmail.com",new Date(), 4000.0, department);
     sellerDao.insert(newseller);
     System.out.println("Inserted! New ID="+ newseller.getId() );
+    
+    System.out.println("=== Teste 5 seller update =====" );
+    seller = sellerDao.findByID(1);
+    seller.setName("Maria Souza");
+    seller.setEmail("maria.souza@tecnoperfil.com.br");
+    sellerDao.update(seller);
+    System.out.println("Update Completed");
+    
+    
+    
 	}
 
 }
